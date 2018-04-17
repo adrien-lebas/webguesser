@@ -1,15 +1,24 @@
 <html>
-  <head></head>
-  <body>
-    <p>
-      The SECRET NUMBER is <%= secret_number %>
-    </p>
-    <form>
-        <input type='text' name='guess' />
-        <input type='submit' value='Guess!' />
-    </form>
-    <p>
-        Result : <%= message %>
-    </p>
-  </body>
+    <head>
+        <style>
+          #result {
+              height: 20px;
+              width: 20px;
+              background: <%= background_color %>;
+              opacity: <%= opacity %>
+          }
+        </style>
+    </head>
+    <body>
+        <p>The SECRET NUMBER is <%= secret_number %>
+        </p>
+        <form>
+            <input type='text' name='guess' />
+            <input type='submit' value='Guess!' />
+        </form>
+        <p>Result : <%= message %>
+        </p>
+        <div id="result">
+        </div>
+    </body>
 </html>
